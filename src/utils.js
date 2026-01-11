@@ -1,13 +1,15 @@
 function normalizaSucesso(entrada) {
-    if (entrada === "true" || entrada === 1) {
+    if (entrada === "true" || entrada === 1 || entrada) {
         return true;
     }
 
     return undefined;
 }
 
-// Só timestamps que não são "invalido" ou null
 function normalizaTimestamp(entrada) {
+    if (entrada === "invalido") return "invalido";
+    if (entrada === null) return null;
+
     return BigInt(entrada);
 }
 
