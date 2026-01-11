@@ -44,7 +44,6 @@ function geraRelatorio(dadosNormalizados) {
         atualizaEventos(dadosNormalizados[i].sucesso, eventos);
 
         if (dadosNormalizados[i].sucesso) {
-            console.log("Oi");
             registraUsuario(map, dadosNormalizados[i].usuario);
         }
     }
